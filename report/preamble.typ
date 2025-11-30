@@ -73,23 +73,9 @@
   show heading: set text(font: sans, weight: "medium")
 
   // 数式
-  set math.equation(numbering: "(1)")
-  show math.equation: set text(font: math-font)
-
-  // 表
-  show figure.where(
-    kind: table,
-  ): set figure.caption(position: top)
-  set table(
-    stroke: none,
-  )
-
-  // リスト
-  set enum(numbering: "(1)")
-
-  // 数式
   let eq_sup = [式]
   set math.equation(numbering: "(1)", supplement: eq_sup)
+  show math.equation: set text(font: math-font)
   show ref: it => {
     let eq = math.equation
     let el = it.element
@@ -115,6 +101,17 @@
         ..counter(eq).at(el.location()),
       )])
   }
+
+  // 表
+  show figure.where(
+    kind: table,
+  ): set figure.caption(position: top)
+  set table(
+    stroke: none,
+  )
+
+  // リスト
+  set enum(numbering: "(1)")
 
   // 句読点
   // showを使うとアキの調節が適切に機能しないため、textlintで対応する
