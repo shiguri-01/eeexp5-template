@@ -1,0 +1,12 @@
+{
+  "tinymist.formatterMode": "typstyle",
+  "[typst]": {
+    "editor.defaultFormatter": "myriad-dreamin.tinymist",
+    "editor.formatOnSave": true
+  },
+  "tinymist.lint.enabled": true,
+  "tinymist.outputPath": "$dir/$name",
+  "textlint.run": "onSave",
+  "textlint.languages": ["typst"],
+  "textlint.autoFixOnSave": true
+}
