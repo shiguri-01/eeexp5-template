@@ -1,4 +1,4 @@
-#import "preamble.typ": bu, doc, format-table, keepp, num, zi
+#import "preamble.typ": bu, doc, format-table, keepp, num, subpar, zi
 #show: doc
 
 = 目的

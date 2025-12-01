@@ -1,6 +1,6 @@
-#import "@preview/cjk-unbreak:0.2.0": remove-cjk-break-space
-
+#import "@preview/cjk-spacer:0.1.0": cjk-spacer
 #import "@preview/zero:0.5.0": format-table, num, set-unit, zi
+#import "@preview/subpar:0.2.2"
 
 #let serif = ((name: "STIX Two Text", covers: "latin-in-cjk"), "Yu Mincho")
 #let sans = ("Arial", "Noto Sans JP")
@@ -13,12 +13,12 @@
 /// = Example
 /// ```typ
 /// 二次関数は、
-/// #keepp($ y = a x^2 + b x + c $)
-/// のように表せられる。
+/// #keepp[$ y = a x^2 + b x + c $]
+/// と表せる。
 ///
 /// 一次関数は、
-/// #keepp([$ y = a x + b $<eq:一次関数>])
-/// のように表せられる。
+/// #keepp[$ y = a x + b $<eq:一次関数>]
+/// と表せる。
 /// ```
 /// - body (content): 数式などのコンテンツ
 /// -> content
@@ -41,7 +41,7 @@
 ]
 
 #let doc(content) = {
-  show: remove-cjk-break-space
+  show: cjk-spacer
 
   set page(paper: "a4", numbering: "1")
 
